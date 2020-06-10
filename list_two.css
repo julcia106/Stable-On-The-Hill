@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+
+/* Navbar section */
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    line-height: 65px;
+    font-size: 2rem;
+}
+
+.link_effect::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1.5px;
+    background: rgb(212, 205, 209);
+    transition: width .3s;
+}
+
+.link_effect:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+.this_page::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background: rgb(212, 205, 209);
+    height: 1.5px;
+    transition: width;
+}
+
+/* Image section */
+
+.image {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/daan-stevens-v_p53KWTTyY-unsplash.jpg);
+    background-position: center top;
+	background-size:cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+/* svg */
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+    font-size: 15px;
+}
+  
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill:rgb(255, 255, 255);
+}
+  
+.svg-icon circle {
+    stroke:rgb(255, 255, 255);
+    stroke-width: 1;
+}
+
+/* Footer section */
+
+footer {
+    background-color: rgb(155, 148, 148);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pFooter {
+    font-size: 15px;
+    color: rgb(75, 68, 68);
+    font-family: "Quicksand", sans-serif;
+    text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(128, 121, 121, 0.911);
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: rgba(255, 255, 255, 0.76);
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0px;
+    height: 70px;
+    background-color: rgba(128, 121, 121, 0.911);
+}
+
+.myH2 {
+    margin: 5% 0;
+	text-align:center;
+	font-size: 4rem;
+}
+
+.myP {
+	text-align: justify;
+	padding: 0 15% 10%;
+    font-size: 20px;
+}
+
+@media all and (max-width:700px){
+	.myP {
+        padding:0%;
+        width: 400px;
+        margin:0 auto;
+	}
+}
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+}
+  
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+    fill: rgb(255, 255, 255);
+}
+  
+.svg-icon circle {
+    stroke: rgb(255, 255, 255);
+    stroke-width: 1;
+}
+
+@media all and (max-width:700px){
+	.myP {
+		padding:0%;
+	}
+} 
+ 
+ /* list two */
+
+ .list_two_container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 10px;
+    color: #333;
+    height: 50vh;
+    margin: 5vh 0;
+    overflow-y: auto;
+}
+
+.list2_title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 80px;
+    opacity: 0.5;
+}
+
+.todo2-list {
+    list-style: none;
+    margin-bottom: 20px;
+}       
+
+svg {
+    width: 64px;
+    height: 64px;
+}
+
+.todo-item {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.done span {
+    text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.tick {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tick::before {
+    content: '✓';
+    font-size: 20px;
+    display: none;
+}
+
+.done .tick::before {
+    display: inline;
+}
+
+.delete-todo {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    }
+
+    .delete-todo svg {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    }
+
+    form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 3px solid #333;
+    }
+
+    /* Add this below all the other styles */
+
+    .empty-state {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    }
+
+    .checklist-icon {
+    margin-bottom: 20px;
+    }
+
+    .empty-state__title, .empty-state__description {
+    margin-bottom: 20px;
+    }
+
+    /* Change the `display: flex` to `display: none` */
+
+    .empty-state {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    }
+
+    /* Add this below the other styles */
+    .todo-list:empty {
+    display: none;
+    }
+
+    .todo-list:empty + .empty-state {
+    display: flex;
+    }
+
+    /* responsive list two ------------------ */
+
+    @media (min-width: 1100px) {
+        .list_two_container{width:1050px;margin:0 auto;}
+        }
+        
+    @media (max-width: 1100px) and (min-width: 1000px) {
+        .list_two_container {width:950px;margin:0 auto;}
+        }
+        
+    @media (max-width: 1000px) and (min-width: 800px) {
+        .list_two_container {width:750px;margin:0 auto;}
+        }
+
+    @media (max-width: 800px) and (min-width: 500px) {
+        .list_two_container {width:450px;margin:0 auto;}
+        }
+        
+    @media (max-width: 500px) {
+        .list_two_container {width:300px;margin:0 auto;}
+        }
+   
