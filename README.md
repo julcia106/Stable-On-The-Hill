@@ -11,6 +11,6 @@ Zawiera następujące elementy:
   + przebywanie na danej podstronie
 + Na dwóch podstronach znajduje się lista ToDo do której można dodawać elementy, usuwać dowolne elementy, 
 modyfikować dowolne elementy
-
-![image](https://user-images.githubusercontent.com/42476893/109954070-267acd00-7ce1-11eb-8e52-d63eca2f3483.png)
+  
+![image](https://user-images.githubusercontent.com/42476893/109954201-57f39880-7ce1-11eb-85fb-0a1aaa6f5349.png)
 
