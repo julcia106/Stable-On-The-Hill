@@ -1,6 +1,6 @@
 # Stable-On-The-Hill
 
-My first fully responsive website for an equestrian center called "Stable On The Hill". I created the website as part of a final project for university classes.
+My first, fully responsive website for an equestrian center called "Stable On The Hill". I created this website as part of a final project for university classes.
 It includes the following items:
 + subpages
 + in the menu, next to each item, there is an appropriate picture in svg format
