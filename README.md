@@ -4,7 +4,7 @@ My first, fully responsive website for an equestrian center called "Stable On Th
 It includes the following items:
 + subpages
 + in the menu, next to each subpage title, there is an appropriate picture in svg format
-+ one of the subpages contains a video using the "<video>" tag
++ one of the subpages contains a video using the "video" tag
 + each menu item has different states depending on the action
    + output
    + on hover (animation)
